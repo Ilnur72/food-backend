@@ -1,0 +1,44 @@
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin1234"
+}
+
+###
+POST http://localhost:8080/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNjkxMTY1ODU0LCJleHAiOjE2OTEyNTIyNTR9.gs0CVqDX6EFD0F3eXIXZyR_irkXmHpTkrQfkmSG5zyM
+Content-Type: application/json
+
+{
+    "first_name": "john",
+    "last_name": "bar",
+    "username": "foobar4",
+    "password": "foobar1234"
+}
+
+
+###
+GET http://localhost:8080/users?sort[by]=username&sort[order]=desc
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNjkxMTY1ODU0LCJleHAiOjE2OTEyNTIyNTR9.gs0CVqDX6EFD0F3eXIXZyR_irkXmHpTkrQfkmSG5zyM
+
+###
+GET http://localhost:8080/users/5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNjkxMTY1ODU0LCJleHAiOjE2OTEyNTIyNTR9.gs0CVqDX6EFD0F3eXIXZyR_irkXmHpTkrQfkmSG5zyM
+
+
+###
+PATCH http://localhost:8080/users/5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNjkxMTY1ODU0LCJleHAiOjE2OTEyNTIyNTR9.gs0CVqDX6EFD0F3eXIXZyR_irkXmHpTkrQfkmSG5zyM
+Content-Type: application/json
+
+{
+    "username": "foobar2 edited",
+    "password": "gjslkasgd"
+}
+
+
+###
+DELETE http://localhost:8080/users/5
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7fSwiaWF0IjoxNjkxMTY1ODU0LCJleHAiOjE2OTEyNTIyNTR9.gs0CVqDX6EFD0F3eXIXZyR_irkXmHpTkrQfkmSG5zyM
