@@ -1,5 +1,5 @@
-const Joi = require('joi');
-const { BadRequestError } = require('../errors');
+const Joi = require("joi");
+const { BadRequestError } = require("../errors");
 
 /**
  * @param {{ body, params, query }} param0
@@ -23,26 +23,5 @@ const httpValidator = ({ body, params, query }, schema) => {
     if (error) throw new BadRequestError(error);
   }
 };
-
-// Middlewareda validatsiya qilish uchun
-// const httpValidatorV2 = (schema) => {
-//   return (req, res, next) => {
-//     if (schema.body) {
-//       const { error } = schema.body.validate(req.body);
-
-//       if (error) throw new BadRequestError(error);
-//     }
-//     if (schema.params) {
-//       const { error } = schema.params.validate(req.params);
-
-//       if (error) throw new BadRequestError(error);
-//     }
-//     if (schema.query) {
-//       const { error } = schema.query.validate(req.query);
-
-//       if (error) throw new BadRequestError(error);
-//     }
-//   };
-// };
 
 module.exports = httpValidator;

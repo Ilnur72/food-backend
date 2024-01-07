@@ -1,4 +1,5 @@
-const config = require("./src/shared/config/index.js");
+// Update with your config settings.
+const config = require("./src/shared/config");
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -7,11 +8,10 @@ module.exports = {
   development: {
     client: "postgresql",
     connection: {
-      host: config.db.host,
-      port: config.db.port,
       database: config.db.name,
       user: config.db.user,
       password: config.db.password,
+      port: config.db.port,
     },
     pool: {
       min: 2,
@@ -29,11 +29,10 @@ module.exports = {
   staging: {
     client: "postgresql",
     connection: {
-      host: config.db.host,
-      port: config.db.port,
       database: config.db.name,
       user: config.db.user,
       password: config.db.password,
+      port: config.db.port,
     },
     pool: {
       min: 2,
@@ -51,11 +50,10 @@ module.exports = {
   production: {
     client: "postgresql",
     connection: {
-      host: config.db.host,
-      port: config.db.port,
       database: config.db.name,
       user: config.db.user,
       password: config.db.password,
+      port: config.db.port,
     },
     pool: {
       min: 2,

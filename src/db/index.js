@@ -1,11 +1,11 @@
-const knex = require('knex');
-const config = require('../shared/config');
+const knex = require("knex");
+const config = require("../shared/config");
 
 /**
  * @type {knex.Knex}
  */
 const db = knex({
-  client: 'postgresql',
+  client: "postgresql",
   connection: {
     database: config.db.name,
     user: config.db.user,

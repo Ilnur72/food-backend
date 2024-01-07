@@ -1,0 +1,8 @@
+GET http://localhost:8080/api/category
+
+
+###
+GET http://localhost:8080/api/food?filters[category_id]=1&sort[by]=price&sort[order]=asc
+
+### 
+GET http://localhost:8080/Food7.jfif

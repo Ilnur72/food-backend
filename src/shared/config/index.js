@@ -1,4 +1,4 @@
-require('dotenv/config');
+require("dotenv/config");
 
 module.exports = {
   env: process.env.NODE_ENV,
@@ -14,3 +14,6 @@ module.exports = {
     secret: process.env.JWT_SECRET,
   },
 };
+
+
+
