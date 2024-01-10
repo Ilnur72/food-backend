@@ -12,7 +12,7 @@ exports.up = function (knex) {
       .references("id")
       .inTable("categories")
       .onDelete("SET NULL");
-    table.string("price").notNullable();
+    table.float("price").notNullable();
     table.string("images").notNullable();
     table.integer("bowls").notNullable();
     table.integer("total_sold");

@@ -50,7 +50,6 @@ const listFood = async ({
   // existing
   //   .limit(pagination.limit)
   //   .offset((pagination.offset - 1) * pagination.limit);
-  console.log(sort);
   applySearch(existing, q, "name");
   applyFilters(existing, filters);
   applySorting(existing, sort);

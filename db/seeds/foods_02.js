@@ -1,4 +1,3 @@
-const foodData = require("../../static/data.js");
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
